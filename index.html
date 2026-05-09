@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Resort | Luxury Redefined</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Glassmorphism Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">LUMINA</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#rooms">Residences</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact" class="btn-outline">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <span class="subtitle">Welcome to Paradise</span>
+            <h1>Where Elegance Meets Nature</h1>
+            <a href="#rooms" class="btn-solid">Discover Our Suites</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container about-grid">
+            <div class="about-text reveal">
+                <span class="section-subtitle">Our Philosophy</span>
+                <h2>A Sanctuary for the Senses</h2>
+                <p>Immerse yourself in a world where meticulous design blends seamlessly with untouched natural beauty. At Lumina, we don't just offer a place to stay; we curate an environment that restores balance, inspires the mind, and rejuvenates the soul.</p>
+                <a href="#" class="btn-text">Read Our Story &#8594;</a>
+            </div>
+            <div class="about-image reveal">
+                <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Resort Architecture">
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Showcase -->
+    <section id="rooms" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Accommodations</span>
+                <h2>Signature Residences</h2>
+            </div>
+            <div class="rooms-grid">
+                <!-- Room Card 1 -->
+                <div class="room-card reveal">
+                    <div class="room-img">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ocean Villa">
+                    </div>
+                    <div class="room-info">
+                        <h3>Oceanfront Pavilion</h3>
+                        <p>Panoramic views with a private infinity plunge pool.</p>
+                        <span class="price">From ₹8500 / night</span>
+                    </div>
+                </div>
+                <!-- Room Card 2 -->
+                <div class="room-card reveal" style="transition-delay: 0.2s;">
+                    <div class="room-img">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Garden Suite">
+                    </div>
+                    <div class="room-info">
+                        <h3>Botanical Suite</h3>
+                        <p>Nestled in lush greenery featuring an open-air bath.</p>
+                        <span class="price">From ₹6000 / night</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Lifestyle</span>
+                <h2>Curated Experiences</h2>
+            </div>
+            <div class="amenities-grid">
+                <div class="amenity-item reveal">
+                    <i class="fa-solid fa-spa"></i>
+                    <h4>Holistic Spa</h4>
+                    <p>Ancient wellness therapies.</p>
+                </div>
+                <div class="amenity-item reveal" style="transition-delay: 0.1s;">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h4>Fine Dining</h4>
+                    <p>Michelin-starred gastronomy.</p>
+                </div>
+                <div class="amenity-item reveal" style="transition-delay: 0.2s;">
+                    <i class="fa-solid fa-water"></i>
+                    <h4>Private Beach</h4>
+                    <p>Secluded white sand shores.</p>
+                </div>
+                <div class="amenity-item reveal" style="transition-delay: 0.3s;">
+                    <i class="fa-solid fa-martini-glass"></i>
+                    <h4>Sunset Lounge</h4>
+                    <p>Bespoke cocktails & views.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-grid">
+            <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Gallery 1"></div>
+            <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Gallery 2"></div>
+            <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=600&q=80" alt="Gallery 3"></div>
+            <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="Gallery 4"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="section-padding dark-footer">
+        <div class="container footer-grid reveal">
+            <div class="footer-brand">
+                <h2>LUMINA</h2>
+                <p>Redefining luxury on the edge of the world.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>123 Serenity Lane, Coastal Riviera</p>
+                <p>reservations@luminaresort.com</p>
+                <p>+1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lumina Resort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
