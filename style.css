@@ -1,0 +1,379 @@
+/* --- Variables & Reset --- */
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #f7f5f0; /* Muted sand */
+    --accent-color: #cda434; /* Muted gold */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --transition-slow: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h1 { font-size: 4.5rem; margin-bottom: 1.5rem; color: var(--text-light); }
+h2 { font-size: 3rem; margin-bottom: 1.5rem; color: var(--primary-color); }
+h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+
+.subtitle, .section-subtitle {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+/* --- Layout & Utilities --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-padding {
+    padding: 8rem 0;
+}
+
+.bg-light {
+    background-color: var(--secondary-color);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* --- Buttons --- */
+a { text-decoration: none; }
+
+.btn-solid, .btn-outline {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: var(--transition-slow);
+}
+
+.btn-solid {
+    background: var(--text-light);
+    color: var(--primary-color);
+}
+
+.btn-solid:hover {
+    background: var(--accent-color);
+    color: var(--text-light);
+}
+
+.btn-outline {
+    border: 1px solid var(--text-light);
+    color: var(--text-light);
+}
+
+.btn-outline:hover {
+    background: var(--text-light);
+    color: var(--primary-color);
+}
+
+.btn-text {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 5px;
+    font-weight: 500;
+    transition: var(--transition-slow);
+}
+
+.btn-text:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* --- Navbar (Glassmorphism) --- */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition-slow);
+    padding: 1.5rem 0;
+}
+
+nav.scrolled {
+    background: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 1rem 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text-light);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Hero Section --- */
+#hero {
+    height: 100vh;
+    background: url('Assets/sara-dubler-Koei_7yYtIo-unsplash.jpg') center/cover no-repeat fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+/* --- About Section --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: -20px 20px 0px var(--secondary-color);
+}
+
+/* --- Rooms Section --- */
+.rooms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.room-card {
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.room-img {
+    overflow: hidden;
+    height: 400px;
+}
+
+.room-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s ease;
+}
+
+.room-card:hover .room-img img {
+    transform: scale(1.05);
+}
+
+.room-info {
+    padding: 2rem 1.2rem;
+}
+
+.room-info .price {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* --- Amenities Section --- */
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    text-align: center;
+}
+
+.amenity-item i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.amenity-item h4 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.amenity-item p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Gallery Section --- */
+.gallery-grid {
+    display: flex;
+    width: 100%;
+}
+
+.gallery-item {
+    flex: 1;
+    height: 400px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+    filter: brightness(0.8);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(1);
+}
+
+/* --- Footer --- */
+.dark-footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.dark-footer h2 { color: var(--text-light); }
+.dark-footer h4 { color: var(--accent-color); margin-bottom: 1rem; }
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* --- WhatsApp Float --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Scroll Animations (JS Hook) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2rem; }
+    .nav-links { display: none; /* Add hamburger menu logic here for production */ }
+    .about-grid, .rooms-grid, .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .gallery-grid { flex-direction: column; }
+    .gallery-item { height: 300px; }
+}
